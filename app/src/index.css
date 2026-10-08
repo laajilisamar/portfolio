@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Theme tokens (HSL) : pink + white ---------- */
+@layer base {
+  :root {
+    --background: 340 100% 99%;
+    --foreground: 330 35% 14%;
+    --card: 0 0% 100%;
+    --secondary: 340 60% 96%;
+    --muted-foreground: 330 14% 38%;
+    --border: 337 50% 90%;
+    --primary: 336 80% 54%;
+    --primary-foreground: 0 0% 100%;
+  }
+
+  .dark {
+    --background: 328 30% 8%;
+    --foreground: 340 60% 95%;
+    --card: 328 26% 12%;
+    --secondary: 328 24% 16%;
+    --muted-foreground: 335 22% 72%;
+    --border: 328 22% 22%;
+    --primary: 336 90% 66%;
+    --primary-foreground: 328 40% 8%;
+  }
+
+  * { @apply border-border; }
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+  body { @apply bg-background font-sans text-foreground antialiased; }
+  ::selection { background: hsl(var(--primary) / 0.25); }
+}
+
+/* ---------- Portfolio components ---------- */
+@layer components {
+  .section-kicker {
+    @apply font-mono text-sm font-bold uppercase tracking-[0.2em] text-primary;
+  }
+
+  .portfolio-grid {
+    background-image:
+      linear-gradient(hsl(var(--primary) / 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.07) 1px, transparent 1px);
+    background-size: 36px 36px;
+  }
+
+  /* Hero */
+  .developer-hero { min-height: 100vh; }
+  .developer-intro { max-width: 46rem; }
+  .developer-scene {
+    position: relative;
+    width: min(100%, 30rem);
+    margin: 2.5rem auto 0;
+  }
+  @media (min-width: 1024px) {
+    .developer-scene {
+      position: absolute;
+      right: 1rem;
+      top: 0.5rem;
+      width: min(44%, 34rem);
+      margin: 0;
+    }
+  }
+  .scene-symbol {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    padding: 0.55rem;
+    border-radius: 1rem;
+    background: hsl(var(--card) / 0.92);
+    box-shadow: 0 10px 24px -8px hsl(var(--primary) / 0.45);
+  }
+  .scene-robot { top: 2%; right: -2%; }
+  .scene-monitor { top: 28%; left: -5%; }
+  .scene-coffee { bottom: 12%; right: -3%; }
+  .scene-code {
+    position: absolute;
+    z-index: 2;
+    left: 6%;
+    bottom: -0.9rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--primary) / 0.35);
+    box-shadow: 0 8px 20px -8px hsl(var(--primary) / 0.4);
+  }
+
+  /* About */
+  .about-orbit {
+    position: absolute;
+    top: -9rem;
+    right: -9rem;
+    width: 26rem;
+    height: 26rem;
+    border-radius: 999px;
+    border: 1.5px dashed hsl(var(--primary) / 0.35);
+  }
+  .about-orbit::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -7px;
+    width: 14px;
+    height: 14px;
+    border-radius: 999px;
+    background: hsl(var(--primary));
+    box-shadow: 0 0 0 6px hsl(var(--primary) / 0.2);
+  }
+  .language-panel { position: relative; border-radius: 1rem; }
+  .language-orb {
+    display: flex;
+    width: 6.5rem;
+    height: 6.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    border: 2px solid hsl(var(--primary) / 0.35);
+    background: hsl(var(--card));
+    box-shadow: 0 12px 24px -12px hsl(var(--primary) / 0.5);
+  }
+}
