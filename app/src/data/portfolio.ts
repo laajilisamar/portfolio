@@ -30,6 +30,7 @@ import  Group35 from "@//assets/designs/Group35.png";
 import  Group36 from "@//assets/designs/Group36.png";
 import  Frame  from "@//assets/designs/Frame.png";
 import  Frame362 from "@//assets/designs/Frame362.png";
+import memo from "@//assets/designs/memo.png";
 
 
 
@@ -64,6 +65,8 @@ export type Project = {
   icon: LucideIcon;
   images?: string []; 
   format: "portrait" | "landscape";
+  linkapp?:string,
+  linkappLabel?: string;
 };
 
 export type ExperienceItem = { date: string; role: string; company: string; detail: string };
@@ -87,8 +90,8 @@ export const PROFILE = {
 } as const;
 
 export const CV_LINKS = [
-  { label: "CV français", href: "/cv/samar-laajili-fr.pdf", fileName: "Samar-Laajili-CV-FR.pdf" },
-  { label: "CV English", href: "/cv/samar-laajili-en.pdf", fileName: "Samar-Laajili-CV-EN.pdf" },
+  { label: "CV français", href: "/cv/samarlaajili-fr.pdf", fileName: "Samar-Laajili-CV-FR.pdf" },
+  { label: "CV English", href: "/cv/samarlaajili-eng.pdf", fileName: "Samar-Laajili-CV-EN.pdf" },
 ] as const;
 
 export const SOCIAL_LINKS: SocialLink[] = [
@@ -122,6 +125,8 @@ export const PROJECTS: Project[] = [
     icon: BookOpen,
     images: [imageG,imageH,imageP],
     format: "portrait",
+      linkapp: "",
+  linkappLabel: "",
   },
   {
     name: "Vibracom",
@@ -133,6 +138,8 @@ export const PROJECTS: Project[] = [
     icon: Code2,
     images: [image11,image12,image13,image14],
     format: "portrait",
+      linkapp: "",
+  linkappLabel: "",
   },
   {
     name: "After-sales service app",
@@ -144,17 +151,35 @@ export const PROJECTS: Project[] = [
     icon: Wrench,
     images: [aa,jj,mm,oo,pl,ki],
     format: "portrait",
+       linkapp: "",
+  linkappLabel: "",
   },
   {
     name: "Freelance technical work",
     label: "Software & remote teaching",
     description: "Delivered a short software assignment under a tight deadline and taught computer science remotely.",
     contribution: "Strengthened project ownership, time management, communication, and learner support.",
-    technologies: ["Software engineering", "Teaching", "Remote work"],
+    technologies: [".net ", "Teaching", "Remote work"],
     category: "Freelance",
     icon: BriefcaseBusiness,
     images: [ava],
     format: "landscape",
+       linkapp: "",
+  linkappLabel: "",
+  },
+   {
+    name: "Game Memory",
+    label: "for children",
+    description: "The Memory Game is not just a challenge for the mind—it’s a journey to discover stories and history. 🧠 Every image carries a powerful story, much like those featuring inspirational Islamic figures who have long been symbols of wisdom and faith. With each click, we rediscover moments from our magnificent past. Can you recall the story behind the image? .",
+    contribution: "Strengthened project ownership, time management, communication, and learner support.",
+    technologies: ["js ", "css", "html"],
+    category: "Freelance",
+    icon: BriefcaseBusiness,
+    images: [memo],
+    format: "landscape",
+    linkapp:"https://gamememorysam01-7fdk.vercel.app/",
+    
+  linkappLabel: "",
   },
 ];
 

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { PROJECTS, PROJECT_CATEGORIES, type ProjectCategory } from "@/data/portfolio";
 import ProjectCard from "./ProjectCard";
 import { Reveal } from "./motion/Reveal";
+import { LinkIcon } from "lucide-react";
 
 const ProjectsSection = () => {
   const [filter, setFilter] = useState<ProjectCategory>("All");
@@ -32,11 +33,11 @@ const ProjectsSection = () => {
           </div>
         </div>
 
-        <motion.div layout className="project-bento mt-12 grid gap-6 md:grid-cols-6">
-          {visibleProjects.map((project, index) => (
-            <ProjectCard key={project.name} project={project} index={index} />
-          ))}
-        </motion.div>
+     <motion.div layout className="project-bento mt-12 grid gap-6 md:grid-cols-6">
+  {visibleProjects.map((project, index) => (
+    <ProjectCard key={project.name} project={project} index={index} />
+  ))}
+</motion.div>
       </div>
     </section>
   );
