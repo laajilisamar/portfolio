@@ -90,8 +90,8 @@ export const PROFILE = {
 } as const;
 
 export const CV_LINKS = [
-  { label: "CV français", href: "/cv/samarlaajili-fr.pdf", fileName: "Samar-Laajili-CV-FR.pdf" },
-  { label: "CV English", href: "/cv/samarlaajili-eng.pdf", fileName: "Samar-Laajili-CV-EN.pdf" },
+  { label: "CV français", href: "/cv/samarlaajiliso-fr.pdf", fileName: "Samar-Laajili-CV-FR.pdf" },
+  { label: "CV English", href: "/cv/samarlaajiliSO-eng.pdf", fileName: "Samar-Laajili-CV-EN.pdf" },
 ] as const;
 
 export const SOCIAL_LINKS: SocialLink[] = [
